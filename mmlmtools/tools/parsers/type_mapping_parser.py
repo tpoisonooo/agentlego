@@ -73,6 +73,9 @@ class TypeMappingParser(BaseParser):
         },
         'text': {
             str: 'string',
+        },
+        'video': {
+            str: 'path'
         }
     }
     _file_suffix = {
