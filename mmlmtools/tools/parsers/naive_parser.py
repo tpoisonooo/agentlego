@@ -13,7 +13,7 @@ class NaiveParser(BaseParser):
         return outputs
 
     def refine_description(self, description: str) -> str:
-        f'''Refine the tool description by replacing the input and output
+        r'''Refine the tool description by replacing the input and output
         markers with raw data types. For example, ```"{{{input: image}}}"```
         will be replaced with ```"image"```.
 
@@ -27,4 +27,4 @@ class NaiveParser(BaseParser):
         def _reformat(match: re.Match) -> str:
             return match.group(2).strip()
 
-        return re.sub(r'{{{(input|output): (.*?)}}}', _reformat, description)
+        return re.sub(r'{{{(input|output):\s*(.*?)}}}', _reformat, description)

@@ -1,6 +1,5 @@
 # Copyright (c) OpenMMLab. All rights reserved.
-# from .anything2image import (Audio2ImageTool, AudioImage2ImageTool,
-#                              AudioText2ImageTool, Thermal2ImageTool,)
+
 from .depth_detection import Image2DepthTool
 from .edge_detection import Image2CannyTool
 from .image_caption import ImageCaptionTool
@@ -9,6 +8,7 @@ from .image_extension import ImageExtensionTool
 from .image_generation import (Canny2ImageTool, DepthText2ImageTool,
                                Pose2ImageTool, ScribbleText2ImageTool,
                                Seg2ImageTool, Text2ImageTool)
+from .intern_video import InternVideoCaptionTool
 from .object_detection import ObjectDetectionTool, Text2BoxTool
 from .ocr import ImageMaskOCRTool, OCRTool
 from .pose_estimation import HumanBodyPoseTool, HumanFaceLandmarkTool
@@ -17,6 +17,7 @@ from .segment_anything import ObjectSegmenting, SegmentAnything, SegmentClicked
 from .semseg_tool import SemSegTool
 from .stylization import InstructPix2PixTool
 from .text_qa import TextQuestionAnsweringTool
+from .video_caption import VideoCaptionTool
 from .vqa import VisualQuestionAnsweringTool
 
 __all__ = [
@@ -27,5 +28,6 @@ __all__ = [
     'ImageMaskOCRTool', 'ObjectSegmenting', 'InstructPix2PixTool',
     'HumanFaceLandmarkTool', 'Image2ScribbleTool', 'ScribbleText2ImageTool',
     'Image2DepthTool', 'DepthText2ImageTool', 'ImageExtensionTool',
-    'VisualQuestionAnsweringTool', 'ObjectReplaceTool', 'ObjectRemoveTool'
+    'VisualQuestionAnsweringTool', 'ObjectReplaceTool', 'ObjectRemoveTool',
+    'VideoCaptionTool', 'InternVideoCaptionTool'
 ]

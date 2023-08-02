@@ -10,11 +10,14 @@ from ..parsers import BaseParser
 from .utils.load import LoadVideo
 from .utils.tag2text import tag2text_caption
 
+MODEL_URL = 'https://huggingface.co/spaces/OpenGVLab/InternGPT/resolve/'  \
+    'main/model_zoo/tag2text_swin_14m.pth'
 
-class VideoCaptionTool(BaseTool):
+
+class InternVideoCaptionTool(BaseTool):
     DEFAULT_TOOLMETA = dict(
         name='Video Description',
-        model={'model': 'model_zoo/tag2text_swin_14m.pth'},
+        model={'model': MODEL_URL},
         description='This is a useful tool when you want to generate '
         'description for a video. It takes a {{{input:video}}} as the input, '
         'and returns a {{{output:text}}} representing the description of the '
@@ -27,8 +30,8 @@ class VideoCaptionTool(BaseTool):
                  device: str = 'cpu'):
         super().__init__(toolmeta, parser, remote, device)
         if remote:
-            raise NotImplementedError('`VideoCaptionTool` does not support '
-                                      'remote mode.')
+            raise NotImplementedError('`InternVideoCaptionTool` does not '
+                                      'support remote mode.')
 
         self.frame_size = 384
         self.transform = None
