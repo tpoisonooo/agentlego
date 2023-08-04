@@ -8,7 +8,6 @@ from .image_extension import ImageExtensionTool
 from .image_generation import (Canny2ImageTool, DepthText2ImageTool,
                                Pose2ImageTool, ScribbleText2ImageTool,
                                Seg2ImageTool, Text2ImageTool)
-from .intern_video import InternVideoCaptionTool
 from .object_detection import ObjectDetectionTool, Text2BoxTool
 from .ocr import ImageMaskOCRTool, OCRTool
 from .pose_estimation import HumanBodyPoseTool, HumanFaceLandmarkTool
@@ -17,7 +16,6 @@ from .segment_anything import ObjectSegmenting, SegmentAnything, SegmentClicked
 from .semseg_tool import SemSegTool
 from .stylization import InstructPix2PixTool
 from .text_qa import TextQuestionAnsweringTool
-from .video_caption import VideoCaptionTool
 from .vqa import VisualQuestionAnsweringTool
 
 __all__ = [
@@ -28,6 +26,5 @@ __all__ = [
     'ImageMaskOCRTool', 'ObjectSegmenting', 'InstructPix2PixTool',
     'HumanFaceLandmarkTool', 'Image2ScribbleTool', 'ScribbleText2ImageTool',
     'Image2DepthTool', 'DepthText2ImageTool', 'ImageExtensionTool',
-    'VisualQuestionAnsweringTool', 'ObjectReplaceTool', 'ObjectRemoveTool',
-    'VideoCaptionTool', 'InternVideoCaptionTool'
+    'VisualQuestionAnsweringTool', 'ObjectReplaceTool', 'ObjectRemoveTool'
 ]
